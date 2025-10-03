@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="microsandbox - Easy secure execution of untrusted user/AI code with hardware-level VM isolation and instant startup">
+    <title>microsandbox - Secure Code Execution</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Run Untrusted Code
+                    <span class="gradient-text">Safely & Instantly</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Hardware-level VM isolation with sub-200ms boot times.
+                    Execute AI-generated code, user submissions, and experimental programs without compromising your system.
+                </p>
+                <div class="hero-cta">
+                    <a href="#get-started" class="btn btn-primary">Get Started</a>
+                    <a href="https://docs.microsandbox.dev" class="btn btn-secondary" target="_blank">Documentation</a>
+                </div>
+                <div class="hero-badges">
+                    <span class="badge">🔒 Hardware Isolation</span>
+                    <span class="badge">⚡ &lt;200ms Boot</span>
+                    <span class="badge">🏠 Self-Hosted</span>
+                    <span class="badge">🤖 AI-Ready</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why microsandbox?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Strong Isolation</h3>
+                    <p>Hardware-level VM isolation with microVMs - not just containers. Your system stays protected even against sophisticated attacks.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Instant Startup</h3>
+                    <p>Boot times under 200ms, not 10+ seconds. Get the security of VMs with the speed you need for productive development.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏠</div>
+                    <h3>Your Infrastructure</h3>
+                    <p>Self-hosted with full control. No cloud dependencies, no vendor lock-in, complete flexibility.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📦</div>
+                    <h3>OCI Compatible</h3>
+                    <p>Works with standard container images. Leverage the entire Docker ecosystem without modification.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI-Ready</h3>
+                    <p>Built-in MCP support for seamless AI integration. Perfect for AI code generation and agent execution.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>Production Ready</h3>
+                    <p>Battle-tested architecture with comprehensive SDK support across 30+ programming languages.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Start Section -->
+    <section id="get-started" class="quick-start">
+        <div class="container">
+            <h2 class="section-title">Get Started in 3 Steps</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Install microsandbox</h3>
+                    <div class="code-block">
+                        <code>curl -sSL https://get.microsandbox.dev | sh</code>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Start the Server</h3>
+                    <div class="code-block">
+                        <code>msb server start --dev</code>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Run Your Code</h3>
+                    <div class="code-block">
+                        <code>pip install microsandbox && python your_script.py</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class="use-cases">
+        <div class="container">
+            <h2 class="section-title">Use Cases</h2>
+            <div class="use-cases-grid">
+                <div class="use-case-card">
+                    <h3>💻 Coding & Dev Environments</h3>
+                    <p>Let AI agents build real apps with professional dev tools. Instant environments for AI pair programming and code generation.</p>
+                </div>
+                <div class="use-case-card">
+                    <h3>📊 Data Analysis</h3>
+                    <p>Process data with AI safely. Work with NumPy, Pandas, TensorFlow in protected environments that respect privacy.</p>
+                </div>
+                <div class="use-case-card">
+                    <h3>🌐 Web Browsing Agent</h3>
+                    <p>Build AI assistants that browse, scrape, and automate web tasks while staying isolated and secure.</p>
+                </div>
+                <div class="use-case-card">
+                    <h3>🚀 Instant App Hosting</h3>
+                    <p>Deploy AI-generated apps in seconds. Zero-setup hosting with automatic cleanup and resource management.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Execute Code Securely?</h2>
+            <p>Join developers running untrusted code safely with microsandbox</p>
+            <div class="cta-buttons">
+                <a href="https://github.com/microsandbox/microsandbox" class="btn btn-primary" target="_blank">View on GitHub</a>
+                <a href="https://discord.gg/T95Y3XnEAK" class="btn btn-secondary" target="_blank">Join Discord</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>microsandbox</h4>
+                    <p>Easy secure execution of untrusted user/AI code</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="https://docs.microsandbox.dev" target="_blank">Documentation</a></li>
+                        <li><a href="https://github.com/microsandbox/microsandbox" target="_blank">GitHub</a></li>
+                        <li><a href="https://discord.gg/T95Y3XnEAK" target="_blank">Discord</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="https://github.com/microsandbox/microsandbox/blob/main/CONTRIBUTING.md" target="_blank">Contributing</a></li>
+                        <li><a href="https://github.com/microsandbox/microsandbox/blob/main/CODE_OF_CONDUCT.md" target="_blank">Code of Conduct</a></li>
+                        <li><a href="https://github.com/microsandbox/microsandbox/blob/main/LICENSE" target="_blank">License</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 microsandbox. Licensed under Apache 2.0</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
