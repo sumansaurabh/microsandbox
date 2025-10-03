@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MicroSandbox - Secure Code Execution Made Simple</title>
+    <meta name="description" content="Run untrusted code safely with hardware-level VM isolation, instant startup, and seamless AI integration. Self-hosted, OCI compatible, and AI-ready.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔒</text></svg>">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <div class="logo">🔒</div>
+                <span class="brand-name">MicroSandbox</span>
+            </div>
+            <div class="nav-links">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#sdk" class="nav-link">SDK</a>
+                <a href="#use-cases" class="nav-link">Use Cases</a>
+                <a href="https://docs.microsandbox.dev" class="nav-link" target="_blank">Docs</a>
+                <a href="https://github.com/microsandbox/microsandbox" class="btn btn-secondary" target="_blank">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.300 24 12c0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    Star on GitHub
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge">🚀 Now with AI Integration</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="gradient-text">Secure Code Execution</span><br>
+                    Made Simple
+                </h1>
+                <p class="hero-subtitle">
+                    Run untrusted AI-generated code, user submissions, or experimental scripts with <strong>hardware-level VM isolation</strong>, <strong>instant startup</strong>, and seamless integration. No more choosing between security and performance.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">200ms</div>
+                        <div class="stat-label">Boot Time</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">25+</div>
+                        <div class="stat-label">Languages</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Self-Hosted</div>
+                    </div>
+                </div>
+                <div class="hero-cta">
+                    <a href="#get-started" class="btn btn-primary btn-large">
+                        Get Started Free
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="m9 18 6-6-6-6"/>
+                        </svg>
+                    </a>
+                    <a href="#demo" class="btn btn-outline btn-large">
+                        Watch Demo
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="5,3 19,12 5,21"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="code-terminal">
+                    <div class="terminal-header">
+                        <div class="terminal-controls">
+                            <span class="control red"></span>
+                            <span class="control yellow"></span>
+                            <span class="control green"></span>
+                        </div>
+                        <div class="terminal-title">secure-execution.py</div>
+                    </div>
+                    <div class="terminal-content">
+                        <div class="code-line">
+                            <span class="prompt">$</span>
+                            <span class="command">curl -sSL https://get.microsandbox.dev | sh</span>
+                        </div>
+                        <div class="code-line">
+                            <span class="prompt">$</span>
+                            <span class="command">msb server start --dev</span>
+                        </div>
+                        <div class="code-line output">✅ MicroSandbox server started</div>
+                        <div class="code-line">
+                            <span class="prompt">$</span>
+                            <span class="command typing">python secure_execute.py</span>
+                        </div>
+                        <div class="code-line output success">🔒 Code executed safely in isolated VM</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-bg">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+    </section>
+
+    <!-- Why MicroSandbox Section -->
+    <section class="why-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose MicroSandbox?</h2>
+                <p>Stop compromising between security and performance. Get both.</p>
+            </div>
+            <div class="comparison-grid">
+                <div class="comparison-item problem">
+                    <div class="comparison-icon">❌</div>
+                    <h3>Traditional Approaches</h3>
+                    <ul>
+                        <li>Running locally = System compromise risk</li>
+                        <li>Containers = Shared kernel vulnerabilities</li>
+                        <li>Traditional VMs = 10+ second boot times</li>
+                        <li>Cloud solutions = Vendor lock-in</li>
+                    </ul>
+                </div>
+                <div class="comparison-item solution">
+                    <div class="comparison-icon">✅</div>
+                    <h3>MicroSandbox Solution</h3>
+                    <ul>
+                        <li>Hardware-level VM isolation</li>
+                        <li>200ms instant startup</li>
+                        <li>Self-hosted with full control</li>
+                        <li>OCI compatible containers</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Powerful Features</h2>
+                <p>Everything you need for secure code execution</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Hardware-Level Security</h3>
+                    <p>True isolation with microVMs powered by libkrun. Each execution runs in its own virtualized environment, completely separated from your host system.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Lightning Fast</h3>
+                    <p>Boot times under 200ms, not 10+ seconds. Start executing code instantly without the traditional VM startup penalty.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏠</div>
+                    <h3>Self-Hosted</h3>
+                    <p>Deploy on your own infrastructure with full control. No vendor lock-in, no data leaving your premises.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📦</div>
+                    <h3>OCI Compatible</h3>
+                    <p>Works with standard container images. Use existing Docker images and container ecosystem tools.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI-Ready</h3>
+                    <p>Built-in MCP support for seamless AI integration. Perfect for AI agents, code generation, and automated workflows.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3>25+ Languages</h3>
+                    <p>SDKs for Python, JavaScript, Rust, Go, Java, and 20+ more languages. Use your preferred programming language.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SDK Section -->
+    <section id="sdk" class="sdk-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Simple SDK Integration</h2>
+                <p>Get started in minutes with our intuitive SDKs</p>
+            </div>
+            <div class="sdk-demo">
+                <div class="sdk-tabs">
+                    <button class="sdk-tab active" data-lang="python">Python</button>
+                    <button class="sdk-tab" data-lang="javascript">JavaScript</button>
+                    <button class="sdk-tab" data-lang="rust">Rust</button>
+                </div>
+                <div class="sdk-content">
+                    <div class="sdk-code active" data-lang="python">
+                        <div class="code-header">
+                            <span class="code-title">main.py</span>
+                            <button class="copy-btn" data-code="python">Copy</button>
+                        </div>
+                        <pre><code>import asyncio
+from microsandbox import PythonSandbox
+
+async def main():
+    async with PythonSandbox.create(name="demo") as sb:
+        exec = await sb.run("name = 'World'")
+        exec = await sb.run("print(f'Hello {name}!')")
+    
+    print(await exec.output()) # prints Hello World!
+
+asyncio.run(main())</code></pre>
+                    </div>
+                    <div class="sdk-code" data-lang="javascript">
+                        <div class="code-header">
+                            <span class="code-title">main.js</span>
+                            <button class="copy-btn" data-code="javascript">Copy</button>
+                        </div>
+                        <pre><code>import { NodeSandbox } from "microsandbox";
+
+async function main() {
+  const sb = await NodeSandbox.create({ name: "demo" });
+
+  try {
+    let exec = await sb.run("var name = 'World'");
+    exec = await sb.run("console.log(`Hello ${name}!`)");
+
+    console.log(await exec.output()); // prints Hello World!
+  } finally {
+    await sb.stop();
+  }
+}
+
+main().catch(console.error);</code></pre>
+                    </div>
+                    <div class="sdk-code" data-lang="rust">
+                        <div class="code-header">
+                            <span class="code-title">main.rs</span>
+                            <button class="copy-btn" data-code="rust">Copy</button>
+                        </div>
+                        <pre><code>use microsandbox::{SandboxOptions, PythonSandbox};
+
+#[tokio::main]
+async fn main() -> Result<(), Box<dyn std::error::Error>> {
+    let mut sb = PythonSandbox::create(
+        SandboxOptions::builder().name("demo").build()
+    ).await?;
+
+    let exec = sb.run(r#"name = "World""#).await?;
+    let exec = sb.run(r#"print(f"Hello {name}!")"#).await?;
+
+    println!("{}", exec.output().await?); // prints Hello World!
+
+    sb.stop().await?;
+    Ok(())
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section id="use-cases" class="use-cases-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Perfect For</h2>
+                <p>Trusted by developers and enterprises worldwide</p>
+            </div>
+            <div class="use-cases-grid">
+                <div class="use-case-card">
+                    <div class="use-case-icon">💻</div>
+                    <h3>AI Code Generation</h3>
+                    <p>Let AI agents build, test, and deploy real applications safely. Perfect for AI pair programming and automated code generation.</p>
+                    <div class="use-case-tags">
+                        <span class="tag">AI Agents</span>
+                        <span class="tag">Code Generation</span>
+                        <span class="tag">Testing</span>
+                    </div>
+                </div>
+                <div class="use-case-card">
+                    <div class="use-case-icon">📊</div>
+                    <h3>Data Analysis</h3>
+                    <p>Process sensitive data with AI assistance while maintaining privacy. Perfect for financial analysis and research.</p>
+                    <div class="use-case-tags">
+                        <span class="tag">Data Science</span>
+                        <span class="tag">Privacy</span>
+                        <span class="tag">Analytics</span>
+                    </div>
+                </div>
+                <div class="use-case-card">
+                    <div class="use-case-icon">🌐</div>
+                    <h3>Web Automation</h3>
+                    <p>Build AI assistants that browse the web, extract data, and automate workflows safely and efficiently.</p>
+                    <div class="use-case-tags">
+                        <span class="tag">Web Scraping</span>
+                        <span class="tag">Automation</span>
+                        <span class="tag">AI Assistants</span>
+                    </div>
+                </div>
+                <div class="use-case-card">
+                    <div class="use-case-icon">🚀</div>
+                    <h3>Instant Hosting</h3>
+                    <p>Deploy and share working applications instantly without complex setup. Perfect for demos and prototypes.</p>
+                    <div class="use-case-tags">
+                        <span class="tag">Deployment</span>
+                        <span class="tag">Prototyping</span>
+                        <span class="tag">Demos</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get Started Section -->
+    <section id="get-started" class="get-started-section">
+        <div class="container">
+            <div class="get-started-content">
+                <h2>Get Started in Minutes</h2>
+                <p>Follow these simple steps to start executing code securely</p>
+                <div class="steps-grid">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Install MicroSandbox</h3>
+                        <div class="code-snippet">
+                            <code>curl -sSL https://get.microsandbox.dev | sh</code>
+                            <button class="copy-btn-small" data-code="install">📋</button>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Start the Server</h3>
+                        <div class="code-snippet">
+                            <code>msb server start --dev</code>
+                            <button class="copy-btn-small" data-code="start">📋</button>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Install SDK</h3>
+                        <div class="code-snippet">
+                            <code>pip install microsandbox</code>
+                            <button class="copy-btn-small" data-code="sdk">📋</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cta-buttons">
+                    <a href="https://docs.microsandbox.dev" class="btn btn-primary" target="_blank">View Documentation</a>
+                    <a href="https://github.com/microsandbox/microsandbox" class="btn btn-outline" target="_blank">Explore on GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="social-proof-section">
+        <div class="container">
+            <div class="social-proof-content">
+                <h2>Trusted by Developers</h2>
+                <div class="github-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">⭐</div>
+                        <div class="stat-info">
+                            <div class="stat-number" data-stat="stars">2.1k+</div>
+                            <div class="stat-label">GitHub Stars</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">👥</div>
+                        <div class="stat-info">
+                            <div class="stat-number" data-stat="contributors">50+</div>
+                            <div class="stat-label">Contributors</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🔄</div>
+                        <div class="stat-info">
+                            <div class="stat-number" data-stat="downloads">10k+</div>
+                            <div class="stat-label">Downloads</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="logo">🔒</div>
+                        <span class="brand-name">MicroSandbox</span>
+                    </div>
+                    <p class="footer-description">
+                        Secure code execution made simple. Hardware-level VM isolation with instant startup.
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <a href="#features">Features</a>
+                        <a href="#sdk">SDK</a>
+                        <a href="#use-cases">Use Cases</a>
+                        <a href="https://docs.microsandbox.dev" target="_blank">Documentation</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <a href="https://github.com/microsandbox/microsandbox" target="_blank">GitHub</a>
+                        <a href="https://discord.gg/T95Y3XnEAK" target="_blank">Discord</a>
+                        <a href="https://github.com/microsandbox/microsandbox/blob/main/CONTRIBUTING.md" target="_blank">Contributing</a>
+                        <a href="https://github.com/microsandbox/microsandbox/blob/main/LICENSE" target="_blank">License</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <a href="https://github.com/microsandbox/microsandbox/blob/main/CODE_OF_CONDUCT.md" target="_blank">Code of Conduct</a>
+                        <a href="https://github.com/microsandbox/microsandbox/blob/main/SECURITY.md" target="_blank">Security</a>
+                        <a href="mailto:team@microsandbox.dev">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    © 2024 MicroSandbox. Licensed under Apache 2.0.
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/microsandbox/microsandbox" target="_blank" aria-label="GitHub">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.300 24 12c0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://discord.gg/T95Y3XnEAK" target="_blank" aria-label="Discord">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.010c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.191.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
