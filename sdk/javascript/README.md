@@ -133,6 +133,30 @@ npm run build
 npm test
 ```
 
+### Running Examples
+
+```sh
+# Run the schema validation example (demonstrates AI SDK v6 compatibility)
+npm run example:schema-validation
+
+# Run other examples
+npm run example:node
+npm run example:python
+npm run example:command
+npm run example:metrics
+```
+
+## AI SDK v6 Compatibility
+
+This package includes fixes for **GitHub Issue #10122** related to missing dependencies in AI SDK v6 beta. If you're integrating with Vercel AI SDK and using schema validation, see the detailed documentation:
+
+📖 **[Fix for Issue #10122: Missing Dependencies](./FIX_ISSUE_10122.md)**
+
+The fix addresses:
+- Missing `@valibot/to-json-schema` peer dependency
+- Missing `effect` peer dependency
+- Module resolution warnings during build
+
 ## License
 
 Apache License 2.0
