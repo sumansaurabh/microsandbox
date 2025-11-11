@@ -3,7 +3,7 @@ use microsandbox_cli::{
     AnsiStyles, MicrosandboxArgs, MicrosandboxCliError, MicrosandboxCliResult, SelfAction,
 };
 use microsandbox_core::{
-    config::START_SCRIPT_NAME,
+    config::{ReferenceOrPath, START_SCRIPT_NAME},
     management::{
         config::{self, Component, ComponentType},
         home, menv, orchestra, sandbox, toolchain,
@@ -231,7 +231,7 @@ pub async fn exe_subcommand(
     args: Vec<String>,
 ) -> MicrosandboxCliResult<()> {
     let (image, script) = parse_name_and_script(&name);
-    let image = image.parse::<Reference>()?;
+    let image = image.parse::<ReferenceOrPath>()?;
 
     if matches!((script, &exec), (Some(_), Some(_))) {
         MicrosandboxArgs::command()

@@ -439,7 +439,7 @@ pub async fn prepare_run(
 /// }
 /// ```
 pub async fn run_temp(
-    image: &Reference,
+    image: &ReferenceOrPath,
     script: Option<&str>,
     cpus: Option<u8>,
     memory: Option<u32>,
@@ -466,7 +466,7 @@ pub async fn run_temp(
 
     // Build the temporary sandbox configuration.
     let sandbox = {
-        let mut b = Sandbox::builder().image(ReferenceOrPath::Reference(image.clone()));
+        let mut b = Sandbox::builder().image(image.clone());
 
         if let Some(cpus) = cpus {
             b = b.cpus(cpus);
